@@ -7,6 +7,7 @@ namespace Session01.Beore
     {
         public int Compare(FileInfo x, FileInfo y)
         {
+            checkequal(x.Length, y.Length);
             if (x.Length<y.Length)
             {
                 return -1;
@@ -19,6 +20,14 @@ namespace Session01.Beore
             {
                 return 1;
             }
+            
+            bool checkequal(long a, long b)
+            {
+                //while repeat code in the same method
+                //clean code in methods
+                return a > b;
+            }
         }
+        
     }
 }
