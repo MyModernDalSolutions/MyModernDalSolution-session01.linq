@@ -17,5 +17,28 @@ namespace Session01.Begining
             }
             return list;
         }
+
+        /// <summary>
+        /// this method used Deffered execution-
+        /// dont use it-
+        /// harder error exception-
+        /// and ....
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="input"></param>
+        /// <param name="func"></param>
+        /// <returns></returns>
+        public static IEnumerable<T> MyWhere2<T>(this IEnumerable<T> input, Func<T, bool> func)
+        {
+            
+            foreach (var item in input)
+            {
+                if (func(item))
+                {
+                   yield return item;
+                }
+            }
+            
+        }
     }
 }
